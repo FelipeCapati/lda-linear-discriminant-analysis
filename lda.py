@@ -64,14 +64,15 @@ class LDA:
 
         return eigen_pairs
 
-    def fit(self, data: pd.DataFrame, target_column_name: str):
+    def fit(self, data: pd.DataFrame, target_column_name: str, log: bool = False):
         self.data = data
         self.target_column_name = target_column_name
         sw = self.__get_sw_from_df_data(data=self.data, target_column_name=self.target_column_name)
         sb = self.__get_sb_from_df_data(data=self.data, target_column_name=self.target_column_name)
         self.eig_pairs = self._get_sorted_eigen_pairs(sw=sw, sb=sb)
 
-        print(self.eig_pairs)
+        if log:
+            print(self.eig_pairs)
 
         return self.eig_pairs
 
@@ -79,11 +80,13 @@ class LDA:
         if self.eig_pairs is None:
             raise Exception("[LDA][Error] - Run First Fit method")
 
+        shape = len(self.data.columns) - 1
+
         if type == LdaType.One:
-            self.w = np.hstack((self.eig_pairs[0][1].reshape(4, 1)))
+            self.w = np.hstack((self.eig_pairs[0][1].reshape(shape, 1)))
         if type == LdaType.Two:
-            self.w = np.hstack((self.eig_pairs[0][1].reshape(4, 1), self.eig_pairs[1][1].reshape(4, 1)))
+            self.w = np.hstack((self.eig_pairs[0][1].reshape(shape, 1), self.eig_pairs[1][1].reshape(shape, 1)))
         if type == LdaType.Three:
-            self.w = np.hstack((self.eig_pairs[0][1].reshape(4, 1), self.eig_pairs[1][1].reshape(4, 1), self.eig_pairs[2][1].reshape(4, 1)))
+            self.w = np.hstack((self.eig_pairs[0][1].reshape(shape, 1), self.eig_pairs[1][1].reshape(shape, 1), self.eig_pairs[2][1].reshape(shape, 1)))
 
         return self.data.drop(columns=[self.target_column_name]).dot(self.w)

@@ -46,19 +46,19 @@ principais para, posteriormente, utilizar o LDA.
 A seguir tem-se os gráficos dos experimentos seguindo a mesma ordem no primeiro experimentos.<br><br>
 Utilização de uma componente principal.
 
-![Alt text](images/ex2-pc1-graph01.png?)
+![Alt text](images/ex2-pc1-graph01.png?)<br>
 ![Alt text](images/ex2-pc1-graph02.png?)
 ![Alt text](images/ex2-pc1-graph03.png?)
 
 Utilização de duas componente principal.
 
-![Alt text](images/ex2-pc2-graph01.png?)
+![Alt text](images/ex2-pc2-graph01.png?)<br>
 ![Alt text](images/ex2-pc2-graph02.png?)
 ![Alt text](images/ex2-pc2-graph03.png?)
 
 Utilização de três componente principal.
 
-![Alt text](images/ex2-pc3-graph01.png?)
+![Alt text](images/ex2-pc3-graph01.png?)<br>
 ![Alt text](images/ex2-pc3-graph02.png?)
 ![Alt text](images/ex2-pc3-graph03.png?)
 

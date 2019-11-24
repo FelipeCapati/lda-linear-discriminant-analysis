@@ -23,11 +23,14 @@ intraclasse, porém tem um escopo de algoritimo parecido, na qual podemos reduzi
 * 2 - Cálculo da matriz de dispersão intra-classe (within-class scatter).<br>
 ![Alt text](images/lda-equation02.png?)
 
-* 3 - Cálculo dos autovalores e autovetores da matriz Sw^(-1)*Sb.<br>
+* 3 - Cálculo da matriz de dispersão entre classes (between-class scatter).<br>
+![Alt text](images/lda-equation04.png?)
 
-* 4 - Seleção de uma Discriminante Linear para um novo subespaço.<br>
+* 4 - Cálculo dos autovalores e autovetores da matriz Sw^(-1)*Sb.<br>
 
-* 5 - Transformação das amostras dentro do subespaço escolhido.<br> 
+* 5 - Seleção de uma Discriminante Linear para um novo subespaço.<br>
+
+* 6 - Transformação das amostras dentro do subespaço escolhido.<br> 
 
 Importante frizar que dentro do escopo de pesquisa [1], [2] e [3] não diz respeito a como classificar as classes
 dentro do espaço reduzido pelo LDA.

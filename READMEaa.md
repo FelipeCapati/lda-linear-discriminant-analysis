@@ -1,1 +1,0 @@
-# lda-linear-discriminant-analysis

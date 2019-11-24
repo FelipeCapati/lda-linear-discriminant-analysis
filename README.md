@@ -7,8 +7,30 @@ redução de dimensionalidade.
 
 ## II.	FUNDAMENTAÇÃO TEÓRICA ##
 
-### A.	MÉTODO DOS MÍNIMOS QUADRADOS ###
+### A.	LINEAR DISCRIMINANT ANALYSIS ###
+O LDA (Linear Discriminant Analysis) é um algortimo de redução de dimensionalidade utilizado para distinguir "n"
+classes dentro de um espaço multidimensional.<br>
+A imagem a seguir é de autoria do Sebastian Raschka e ilustra bem a finalidade do PCA e do LDA:<br>
 
+![Alt text](images/lda-comp-pca.png?)
+
+Similar ao PCA, o LDA diferencia-se pelo objetivo de maximizar as distancias entre classes e minimizar a distancia
+intraclasse, porém tem um escopo de algoritimo parecido, na qual podemos reduzi-las aos seguintes passos [1]:
+
+* 1 - Cálculo da média d-dimensional.<br>
+![Alt text](images/lda-equation01.png?)
+
+* 2 - Cálculo da matriz de dispersão intra-classe (within-class scatter).<br>
+![Alt text](images/lda-equation02.png?)
+
+* 3 - Cálculo dos autovalores e autovetores da matriz Sw^(-1)*Sb.<br>
+
+* 4 - Seleção de uma Discriminante Linear para um novo subespaço.<br>
+
+* 5 - Transformação das amostras dentro do subespaço escolhido.<br> 
+
+Importante frizar que dentro do escopo de pesquisa [1], [2] e [3] não diz respeito a como classificar as classes
+dentro do espaço reduzido pelo LDA.
 
 ## III.	METODOLOGIA ##
 Para o projeto vigente foi utilizado python juntamente com o Notebook Jupyter para prototipar o modelo do
@@ -87,5 +109,6 @@ apoiaram em meio a dificuldades.
 
 ## VII. REFERÊNCIAS ##
 
-[1] <br>
-[2]	R. Bianchi, Tópicos Especiais em Aprendizagem, 2019, ppt slide Centro Universitário FEI.
+[1] S. Raschka, Linear Discriminant Analysis, 08/2014, link: https://sebastianraschka.com/Articles/2014_python_lda.html, acessado em 11/2019<br>
+[2] S. Balakrishnama, A. Ganapathiraju, LINEAR DISCRIMINANT ANALYSIS - A BRIEF TUTORIAL, Institute for Signal and Information Processing, Department of Electrical and Computer Engineering.
+[3]	R. Bianchi, Tópicos Especiais em Aprendizagem, 2019, ppt slide Centro Universitário FEI.
